@@ -59,3 +59,19 @@ h1 {
   float: left;
   margin: 0 10px 0 10px;
 }
+
+.pixel-squares {
+  float: left;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border: 1px solid #e7e7e7;
+}
+
+.palette-circles {
+  float: left;
+  width: 30px;
+  height: 30px;
+  background: white;
+  border: 1px solid #e7e7e7;
+}
