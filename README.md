@@ -1,48 +1,45 @@
-![alt tag](https://raw.github.com/dogfalo/materialize/master/images/materialize.gif)
-===========
+# Pixel Art Maker
 
-[![Travis CI](https://travis-ci.org/Dogfalo/materialize.svg?branch=master)](https://travis-ci.org/Dogfalo/materialize)[![devDependency Status](https://david-dm.org/Dogfalo/materialize/dev-status.svg)](https://david-dm.org/Dogfalo/materialize#info=devDependencies)[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/Dogfalo/materialize?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+In this exercise, you'll create your own pixel art maker which will allow a user to choose colors from a palette and then paint pixel art. The interface is completely up to you, but it could look something like this.
 
-[Materialize](http://materializecss.com/), a CSS Framework based on material design
+![Example of Pixel Art Maker](pixel-art-maker-alt.png)
 
-### Current Version : v0.97.7
+More specifically, your pixel art maker should allow a user to do the following.
 
-## Sass Requirements:
-- Ruby Sass 3.3+, LibSass 0.6+
+1. Start with a blank canvas of pixels.
+1. Select a brush color from a palette of colors.
+1. Paint the pixels on the canvas using the brush color.
+1. Repeat step 2.
 
-## Supported Browsers:
-Chrome 35+, Firefox 31+, Safari 7+, IE 10+
+Here's a development workflow that we recommend you use.
 
-## Changelog
-- v0.97.7 (July 23rd)
-  - Basic horizontal cards
-  - Carousel bug fixes and new features
-  - Updated sidenav styles and new component
-  - Meteor package now supports Sass
-  - Autocomplete form component
-  - Chips jQuery plugin
-- v0.97.6 (April 1st)
-  - **Removed deprecated material icons from project**
-  - **Changed /font directory to /fonts**
-  - Datepicker and ScrollSpy now compatible with jQuery 2.2.x
-  - Responsive tables now work with empty cells
-  - Added focus states to checkboxes, switches, and radio buttons
-  - Sidenav and Modals no longer cause flicker with scrollbar
-  - Materialbox overflow and z-index issues fixed
-  - Added new option for Card actions within a Card reveal
-- v0.97.5 (Dec 21, 2015)
-  - Fixed Meteor package crash
-- v0.97.4 (Dec 20, 2015)
-  - Added Jasmine testing with Travis CI
-  - Select bugfixes
-  - Grid Offset bugfix
-  - Dropdown overflow bugfix
-  - Range slider error bugfix
+1. Fork and clone this repository.
+1. Create a small, 2x2 grid canvas made up of white, square `div` tags with a border.
+1. Add an event listener to each `div` so when clicked the background turns red.
+1. Create a small palette of two colors (e.g. red and blue) below the canvas using more `div` tags.
+1. Add an event listener to these `div` tags so when clicked the brush color is saved.
+1. Expand the dimensions of the pixel canvas.
+1. Expand the palette with more colors. (i.e. red, orange, yellow, green, blue, purple, brown, gray, black, white, etc.)
+1. Expand the palette with a brush color indicator.
+1. Improve the look and feel of the canvas and color palette. Be careful not to break your program's behavior!
 
+**TIP:** Check out [this handy tool](http://www.colors.commutercreative.com/grid/) to see a list of all the named colors in CSS.
 
+### Bonus 1
 
-## Contributing
-[Please read CONTRIBUTING.md for more information](CONTRIBUTING.md)
+Improve the mouse so it behaves like a real paintbrush. In other words, allow the user to paint by clicking and dragging across the canvas. For this, you'll need a combination of the `mousedown`, `mouseenter`, and `mouseup` events.
 
-## Testing
-We use Jasmine as our testing framework and we're trying to write a robust test suite for our components. If you want to help, [here's a starting guide on how to write tests in Jasmine](https://docs.google.com/document/d/1dVM6qGt_b_y9RRhr9X7oZfFydaJIEqB9CT7yekv-4XE/edit?usp=sharing)
+**TIP:** The [`mouseenter` event](https://developer.mozilla.org/en-US/docs/Web/Events/mouseenter) doesn't bubble up the DOM tree.
+
+### Bonus 2
+
+Add a color picker which allows the user to select any brush color using the [`<input type="color">` tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/color) and the [`change` event](https://developer.mozilla.org/en-US/docs/Web/Events/change).
+
+### Deployment
+
+Read over the following articles to learn how to deploy this web site to Surge.
+
+- [Getting started with Surge](http://surge.sh/help/getting-started-with-surge)
+- [Remembering a domain](http://surge.sh/help/remembering-a-domain)
+
+A good domain name for this project is `USERNAME-pixel-art-maker.surge.sh` where `USERNAME` is your GitHub username in all **lowercase** letters. Once deployed and everything works as you expect, copy your Surge URL and paste it at the top of your GitHub repository's page.
