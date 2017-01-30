@@ -43,6 +43,10 @@ function init() {
         e.style.border = currentColor;
         e.preventDefault();
       });
+      pixel[k].addEventListener('click', function() {
+        this.style.backgroundColor = currentColor;
+        this.style.border = currentColor;
+      });
     }
 }
 
